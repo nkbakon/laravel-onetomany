@@ -24,7 +24,7 @@
                             <a href=""><li class="{{ (request()->segment(1) == 'dashboard') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-10 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
                                 <span class="font-semibold"><i class="fa fa-home"></i> Dashboard</span>
                             </li></a>
-                            <a href=""><li class="{{ (request()->segment(1) == 'categories') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-5 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
+                            <a href="{{ route('category.index') }}"><li class="{{ (request()->segment(2) == 'category') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-5 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
                                 <span class="font-semibold"><i class="fa-sharp fa-solid fa-handshake"></i> Categories</span>
                             </li></a>
                             <a href=""><li class="{{ (request()->segment(1) == 'products') ? 'bg-violet-700 border-violet-700': '' }} px-3 py-1 flex space-x-2 mt-5 rounded-md border border-violet-500 cursor-pointer hover:bg-violet-600 hover:border-violet-700">					
