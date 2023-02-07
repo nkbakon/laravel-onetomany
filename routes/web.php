@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,5 +24,11 @@ Route::prefix('admin')->group( function() {
         Route::get('category', 'index')->name('category.index');
         Route::get('category/create', 'create')->name('category.create');
         Route::post('category', 'store')->name('category.store');
+    });
+
+    Route::controller(ProductController::class)->group(function () {
+        Route::get('products', 'index')->name('products.index');
+        Route::get('products/create', 'create')->name('products.create');
+        Route::post('products', 'store')->name('products.store');
     });
 });
